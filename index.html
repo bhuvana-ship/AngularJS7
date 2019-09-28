@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" ng-App="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>website bootstrap</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section class="container h-100 w-100 bg-dark text-white">
+        <div class="databindingProgram" ng-init="quantity=1;price=70.68">
+            Quantity : <input type="number" ng-model="quantity"><br><br>
+            Price : <input type="number" ng-model="price"><br><br>
+            Total in Dollar : {{quantity*price}} <br> <br> <br>
+        </div>
+
+        <div class="repeatingElementProgram" ng-init="names=['hai','how','are','you','AngularJS']">
+            <p>Looping with ng-repeat:</p>
+            <ol>
+                <li ng-repeat="x in names" class="text-white">
+                    {{ x }}
+                </li>
+            </ol>
+        </div>
+
+        <div class="objectData" ng-init="nameObject=[
+        {nameData:'Bhuvana',countryData:'India'},
+        {nameData:'karishma',countryData:'New Delhi'},
+        {nameData:'vaishali',countryData:'Tamil Nadu'}
+        ]">
+            <p>Looping with objects:</p>
+            <ul>
+                <li ng-repeat="x1 in nameObject">
+                    {{x1.nameData+','+x1.countryData}}
+                </li>
+            </ul>
+
+        </div>
+
+    </section>
+
+    <script src="js/angular.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/all.js"></script>
+</body>
+
+</html>
